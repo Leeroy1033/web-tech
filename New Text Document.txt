@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SET08101 - Tables</title>
+	</head>
+	<body>
+		<h3>Table Time!</h3>
+		<table>
+		   <tr>
+			<th>Company</th>
+			<th>Contact</th>
+			<th>Country</th>
+		   </tr>
+		    <tr>
+			<td>Lucky Foods</td>
+			<td>Hung Li</td>
+			<td>Singapore</td>
+		   </tr>
+		    <tr>
+			<td>PK15</td>
+			<td>N.W</td>
+			<td>Scotland</td>
+		   </tr>
+		</table>
+	</body>
+</html>
