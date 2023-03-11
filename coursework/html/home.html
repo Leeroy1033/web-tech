@@ -1,0 +1,58 @@
+<!DOCTYPE html> 
+<html>
+<head>
+    <link rel="stylesheet" href="../css/home.css">
+    <title>
+        Leeroy's Recipe Bazaar
+    </title>
+</head>
+<body>
+    <header>
+        <h1>
+            Welcome to Leeroy's Recipe Bazaar
+        </h1>
+        <nav id="navbar">
+            <ul id="nav-links">
+                <li><a href="home.html">Home</a></li>
+			    <li><a href="about.html">About</a></li>
+			    <li><a href="recipe_search.html">Recipes</a></li>
+			    <li><a href="safety.html">Cooking Safety</a></li>
+                <li><a href="placeholder.html">Recipe Stories</a></li>
+            </ul>
+
+            <ul id="user-links">
+                <li><a href="login.html">User Zone</a></li>
+			    <li><a href="placeholder.html">Visitor Wall</a></li>
+			    <li><a href="contact.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="display"></div>
+
+    <script>
+        var url = "https://www.themealdb.com/api/json/v1/1/random.php";
+
+        $.getJSON(url, function (data) {
+            console.log(data);
+            var output = data.meals;
+
+            for (var i = 0; i < output.length; i++) {
+                display.innerHTML +=
+
+                    `<img src="${output[i].strMealThumb}" alt="${output[i].strMeal}"> <br>
+                
+                
+                ${output[i].strMeal} <br>
+                Category:  ${output[i].strCategory} <br>
+                Source: <a href="${output[i].strSource}">${output[i].strSource}</a>`;
+        }
+
+});
+    </script>
+
+    
+
+
+</body>
+</html>
